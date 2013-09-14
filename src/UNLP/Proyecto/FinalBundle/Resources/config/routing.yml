@@ -1,0 +1,12 @@
+final_proyecto_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: FinalProyectoBundle:Default:index }
+final_proyecto_home:
+    pattern:  /home
+    defaults: { _controller: FinalProyectoBundle:Default:home }
+final_proyecto_start_session:
+    pattern:  /startSession
+    defaults: { _controller: FinalProyectoBundle:Default:startSession }
+final_proyecto_close_session:
+    pattern:  /closeSession
+    defaults: { _controller: FinalProyectoBundle:Default:closeSession }

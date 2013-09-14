@@ -1,0 +1,7 @@
+parameters:
+#    final_proyecto.example.class: UNLP\Proyecto\FinalBundle\Example
+
+services:
+#    final_proyecto.example:
+#        class: %final_proyecto.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

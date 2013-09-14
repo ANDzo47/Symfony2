@@ -1,0 +1,26 @@
+UNLP\Proyecto\FinalBundle\Entity\User:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: '255'
+        lastname:
+            type: string
+            length: '255'
+        email:
+            type: string
+            length: '255'
+        typeRol:
+            type: integer
+            column: type_rol
+        lastSessionId:
+            type: string
+            length: '255'
+            column: last_session_id
+    lifecycleCallbacks: {  }

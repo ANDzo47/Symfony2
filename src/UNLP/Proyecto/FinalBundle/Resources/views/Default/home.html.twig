@@ -1,0 +1,13 @@
+{% extends 'FinalProyectoBundle::layout.html.twig' %}
+
+{% block contenido %}
+
+<h1>Contenido Del Home</h1>
+
+<form id="contactForm" name="contactForm" method="POST" action="{{ path('final_proyecto_start_session') }}" >
+    Username: <input type="text" name="username" id="username"><br>
+    Password: <input type="password" name="password" id="password"><br>
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
