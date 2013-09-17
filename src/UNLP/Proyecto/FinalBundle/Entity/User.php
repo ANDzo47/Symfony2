@@ -142,16 +142,6 @@ class User
     }
 
     /**
-     * Get name
-     *
-     * @return string 
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
      * Set lastname
      *
      * @param string $lastname

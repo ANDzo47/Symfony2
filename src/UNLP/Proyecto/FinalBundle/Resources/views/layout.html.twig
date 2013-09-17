@@ -1,7 +1,12 @@
 {% extends '::base.html.twig' %}
 
 {% block stylesheets %}
- <link href="{{ asset('bundles/final_proyecto/css/estilo.css') }}" type="text/css" rel="stylesheet" />
+    <link href="{{ asset('bundles/final_proyecto/css/estilo.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/final_proyecto/js/main.js') }}"></script>
+    <script src="{{ asset('bundles/final_proyecto/js/jquery-1.10.2.min.js') }}"></script>
 {% endblock %}
 
 {% block body %}

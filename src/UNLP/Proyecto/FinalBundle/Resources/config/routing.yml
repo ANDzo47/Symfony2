@@ -10,3 +10,12 @@ final_proyecto_start_session:
 final_proyecto_close_session:
     pattern:  /closeSession
     defaults: { _controller: FinalProyectoBundle:Default:closeSession }
+final_proyecto_show_map:
+    pattern:  /showMap
+    defaults: { _controller: FinalProyectoBundle:Proyect:showMap }
+final_proyecto_get_markers:
+    pattern:  /getMarkers
+    defaults: { _controller: FinalProyectoBundle:Proyect:getProjectMarkers }
+final_proyecto_add_marker:
+    pattern:  /addMarker
+    defaults: { _controller: FinalProyectoBundle:Proyect:addProjectMarker }

@@ -29,12 +29,11 @@ class DefaultController extends Controller
         $session = new Session();
         $session->start();
 
-        $postData = $request->request->get('contactForm');
-        $name_value = $postData['username'];
+        $postData = $request->request->get('username');
+        //$name_value = $postData['username'];
 
-        //var_dump($request);
+        //var_dump($name_value);
         var_dump($postData);
-        var_dump($name_value);
 
         return $this->render('FinalProyectoBundle:Default:startSession.html.twig');
 

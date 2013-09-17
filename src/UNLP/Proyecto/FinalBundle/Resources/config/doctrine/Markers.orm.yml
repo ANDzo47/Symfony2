@@ -1,0 +1,26 @@
+UNLP\Proyecto\FinalBundle\Entity\Markers:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: '60'
+        address:
+            type: string
+            length: '80'
+        lat:
+            type: float
+        lng:
+            type: float
+        type:
+            type: string
+            length: '30'
+        projectId:
+            type: integer
+            column: project_id
+    lifecycleCallbacks: {  }

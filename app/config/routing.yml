@@ -1,0 +1,8 @@
+final_proyecto:
+    resource: "@FinalProyectoBundle/Resources/config/routing.yml"
+    prefix:   /proyecto
+
+jazzyweb_aulas_mentor_alimentos:
+    resource: "@JazzywebAulasMentorAlimentosBundle/Resources/config/routing.yml"
+    prefix:   /alimentos
+

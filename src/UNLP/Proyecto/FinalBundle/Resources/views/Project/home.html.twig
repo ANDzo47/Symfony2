@@ -1,0 +1,37 @@
+{% extends 'FinalProyectoBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('bundles/final_proyecto/js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/final_proyecto/js/jquery-1.10.2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/final_proyecto/js/proyect.js') }}"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+{% endblock %}
+
+{% block contenido %}
+
+<div id="map" style="width: 500px; height: 300px"></div>
+<div>
+    <h1> Search Locations </h1>
+    <form id="mapForm" name="mapForm" method="POST" action="{{ path('final_proyecto_get_markers') }}" >
+        <input type="text" id="projectId" name="projectId" /><br>
+        <input type="submit" value="Cargar Markers">
+    </form>
+</div>
+
+<div>
+    <h1> Search Location </h1>
+
+    Address: <input type="text" id="addressSave" name="addressSave" />
+    <button type="button" id="buttonGeoCode">Go!</button>
+
+    <h1> Save Location </h1>
+    <form id="saveMarker" name="saveMarker" method="POST" action="{{ path('final_proyecto_add_marker') }}" >
+        Project Id: <input type="text" id="projectIdSave" name="projectIdSave" /><br>
+        Name: <input type="text" id="nameSave" name="nameSave" /><br>
+        Type: <input type="text" id="typeSave" name="typeSave" /><br><br>
+
+        <input type="submit" value="Guardar Marcador">
+    </form>
+</div>
+
+{% endblock %}
