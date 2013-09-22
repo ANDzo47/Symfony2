@@ -172,6 +172,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'UNLP\\Proyecto\\FinalBundle\\Controller\\ProyectController::addProjectMarkerAction',  '_route' => 'final_proyecto_add_marker',);
             }
 
+            // final_proyecto_delete_marker
+            if ($pathinfo === '/proyecto/deleteMarker') {
+                return array (  '_controller' => 'UNLP\\Proyecto\\FinalBundle\\Controller\\ProyectController::deleteProjectMarkerAction',  '_route' => 'final_proyecto_delete_marker',);
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/alimentos')) {

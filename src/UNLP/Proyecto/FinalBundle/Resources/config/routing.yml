@@ -19,3 +19,7 @@ final_proyecto_get_markers:
 final_proyecto_add_marker:
     pattern:  /addMarker
     defaults: { _controller: FinalProyectoBundle:Proyect:addProjectMarker }
+final_proyecto_delete_marker:
+    pattern:  /deleteMarker
+    defaults: { _controller: FinalProyectoBundle:Proyect:deleteProjectMarker }
+

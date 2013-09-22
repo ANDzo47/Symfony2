@@ -49,6 +49,7 @@ class ProyectController extends Controller
              $result = $result . 'lat="' . $marker->getLat() . '" ';
              $result = $result . 'lng="' . $marker->getLng() . '" ';
              $result = $result . 'type="' . $marker->getType() . '" ';
+             $result = $result . 'id="' . $marker->getId() . '" ';
              $result = $result . '/>';
 
          }
@@ -97,6 +98,31 @@ class ProyectController extends Controller
         $em->flush();
 
         return self::getMarkersForProjectInXML($projectId);
+
+    }
+
+    public function deleteProjectMarkerAction(Request $request){
+
+        $markerId = $request->request->get('deleteMarkerId');
+
+        $em = $this->getDoctrine()->getManager();
+        $marker = $em->getRepository('FinalProyectoBundle:Markers')->find($markerId);
+
+        if ($marker) {
+
+            $projectId = $marker->getProjectId();
+
+            $em->remove($marker);
+            $em->flush();
+
+            return self::getMarkersForProjectInXML($projectId);
+
+        }
+        else{
+            return self::getMarkersForProjectInXML(0);
+        }
+
+
 
     }
 

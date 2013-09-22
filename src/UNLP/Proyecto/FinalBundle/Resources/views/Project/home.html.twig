@@ -5,9 +5,28 @@
     <script type="text/javascript" src="{{ asset('bundles/final_proyecto/js/jquery-1.10.2.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('bundles/final_proyecto/js/proyect.js') }}"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
 {% endblock %}
 
 {% block contenido %}
+
+<div class="infobox-wrapper">
+
+    <div id="infobox">
+
+        <img id="deleteMarkerButton" src="{{ asset('bundles/final_proyecto/images/remove_marker.png') }}" alt="Delete" />
+        <form id="deleteMarkerForm" name="deleteMarkerForm" method="POST" action="{{ path('final_proyecto_delete_marker') }}" >
+
+            <div id="infobox-container">
+                <div id="infobox-name"></div>
+                <div id="infobox-address"></div>
+                <input type="hidden" name="deleteMarkerId" id="deleteMarkerId" value="">
+            </div>
+
+        </form>
+
+    </div>
+</div>
 
 <div id="map" style="width: 500px; height: 300px"></div>
 <div>
